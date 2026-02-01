@@ -1,10 +1,93 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# ==============================================================================
+# MiniClawd Bot - Git Ignore (Python)
+# ==============================================================================
 
-# Virtual environments
-.venv
+# Python
+# ------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+# --------------------
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables (NEVER commit these!)
+# -------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+# --------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# OS files
+# --------
+.DS_Store
+Thumbs.db
+
+# Logs
+# ----
+logs/
+*.log
+
+# Testing
+# -------
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter Notebooks
+# -----------------
+.ipynb_checkpoints/
+
+# Data files (keep structure, ignore content)
+# -------------------------------------------
+data/vectorstore/*.json
+data/vectorstore/*.npy
+data/vectorstore/*.pkl
+!data/vectorstore/.gitkeep
+
+# Memory files - keep templates, ignore daily logs
+# ------------------------------------------------
+memory/daily/*.md
+!memory/daily/.gitkeep
+memory/heartbeat_state.json
+
+# Temporary files
+# ---------------
+tmp/
+temp/
+*.tmp

@@ -1,0 +1,36 @@
+# ==============================================================================
+# MiniClawd Bot - Python Dependencies
+# ==============================================================================
+# Install with: pip install -r requirements.txt
+
+# Slack Integration
+# -----------------
+# slack-bolt: The official Slack framework for building apps
+# slack-sdk: Low-level Slack API client
+slack-bolt>=1.18.0
+slack-sdk>=3.26.0
+
+# AI/LLM
+# ------
+# openai: Official OpenAI Python client for GPT and embeddings
+openai>=1.12.0
+
+# Configuration
+# -------------
+# python-dotenv: Load environment variables from .env files
+python-dotenv>=1.0.0
+
+# HTTP Client
+# -----------
+# httpx: Modern async HTTP client (used for GitHub, Notion APIs)
+httpx>=0.26.0
+
+# Vector Operations
+# -----------------
+# numpy: Numerical operations for vector similarity calculations
+numpy>=1.26.0
+
+# Scheduling
+# ----------
+# apscheduler: Advanced Python Scheduler for reminders and cron jobs
+apscheduler>=3.10.0

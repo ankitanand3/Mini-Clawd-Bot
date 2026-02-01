@@ -1,7 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "mini-clawd-bot"
-version = "0.1.0"
-description = "Add your description here"
+name = "miniclawd-bot"
+version = "1.0.0"
+description = "Intelligent Slack assistant with agent-based architecture, multi-layer memory, and MCP tools"
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.11"
-dependencies = []
+keywords = ["slack", "bot", "ai", "agent", "mcp", "rag", "memory"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "slack-bolt>=1.18.0",
+    "slack-sdk>=3.26.0",
+    "openai>=1.12.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.26.0",
+    "numpy>=1.26.0",
+    "apscheduler>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=24.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.8.0",
+]
+
+[project.scripts]
+miniclawd = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
